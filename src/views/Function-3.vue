@@ -35,7 +35,7 @@
           v-model="number[5]"
         ></v-text-field>
         <h2 v-if="displayResult">Second Max = {{ max }}</h2>
-        <v-btn class="mr-4" @click="findMax2, (displayResult = true)"
+        <v-btn class="mr-4" @click="findMax2(), (displayResult = true)"
           >Find Second Max</v-btn
         >
         <v-btn class="mr-4" @click="clear">Clear</v-btn>
