@@ -5,6 +5,8 @@ import FetchPokemonsApi from "../views/Fetch-Pokemon's-API.vue";
 import Function1 from "../views/Function-1.vue";
 import Function2 from "../views/Function-2.vue";
 import Function3 from "../views/Function-3.vue";
+import testF3 from "../views/testF3.vue";
+
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,11 @@ Vue.use(VueRouter)
     path: "/Function-3",
     name: "function3",
     component: Function3,
+  },
+  {
+    path: "/testF3",
+    name: "testF3",
+    component: testF3,
   },
 
 ]

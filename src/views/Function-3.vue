@@ -12,7 +12,7 @@
                 :key="index"
                 type="number"
                 placeholder="input number "
-                v-model.lazy="number[index]"
+                v-model.number="number[index]"
               >
               </v-text-field>
             </v-col>
@@ -88,13 +88,15 @@ export default {
       this.sortedArray();
       this.findMax();
       this.isActive = true;
-
+      // เช็คหาค่าสูงสุดลำดับ 2
       for (let i = this.sortedNum.length; i >= 0; i--) {
         if (this.max > this.sortedNum[i]) {
           this.max2nd = this.sortedNum[i];
           break;
-        } else if (this.sortedNum.length == 1) {
+        } else if (this.sortedNum.length === 1 ) {
           this.max2nd = this.sortedNum[i];
+        } else if (this.max === this.sortedNum[0]){
+          this.max2nd = this.max;
         } else {
           this.max2nd = "null";
         }
